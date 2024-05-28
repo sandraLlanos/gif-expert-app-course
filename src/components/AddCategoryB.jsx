@@ -1,8 +1,7 @@
-import { useState } from "react"
+import { useState } from "react";
 
-// eslint-disable-next-line react/prop-types
-export const AddCategory = ({onAddCategories}) => {
-  console.log('cat',onAddCategories)
+export const AddCategory = ({ onAddCategories }) => {
+  // console.log('cat',onAddCategories)
 
   const [inputValue, setInputValue] = useState('One Push')
 
@@ -13,7 +12,7 @@ export const AddCategory = ({onAddCategories}) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(inputValue);
+    // console.log(inputValue);
     // the input value will update the parent
     // communication btw components through props
     // onAddCategories(categories => {
@@ -25,9 +24,9 @@ export const AddCategory = ({onAddCategories}) => {
     setInputValue('');
   }
 
+  // you can use Form as a
+  //  parent as fragments do, you can't use sibling elements without a wrapper
   return (
-    // you can use Form as a
-    //  parent as fragments do, you can't use sibling elements without a wrapper
     <form onSubmit={onSubmit}>
       <input 
         type="text"
@@ -38,3 +37,4 @@ export const AddCategory = ({onAddCategories}) => {
     </form>
   )
 }
+

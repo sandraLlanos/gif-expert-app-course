@@ -2,7 +2,6 @@
   "name": "git-expert-app-react",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,6 +9,8 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "@babel/runtime": "^7.24.5",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react"
 // import { AddCategoryB } from "./components/AddCategoryB"
 import { AddCategoryA, GifGrid } from "./components/";

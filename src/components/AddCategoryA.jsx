@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import React from 'react';
+import { useState } from "react";
+import PropTypes from 'prop-types'
 
 // eslint-disable-next-line react/prop-types
 export const AddCategoryA = ({onNewCategory}) => {
@@ -14,13 +16,19 @@ export const AddCategoryA = ({onNewCategory}) => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
-        <input 
-          type="text"
-          placeholder="Search"
-          value={inputValue}
-          onChange={(event) => onInputChange(event)}
-        />
-      </form>
-    )
+        <form onSubmit={onSubmit} aria-label='form'>
+          <input 
+            type="text"
+            placeholder="Search"
+            value={inputValue}
+            onChange={(event) => onInputChange(event)}
+          />
+        </form>
+        )
 }
+
+
+AddCategoryA.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
+}
+
